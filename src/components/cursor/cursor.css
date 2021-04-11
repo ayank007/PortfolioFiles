@@ -1,0 +1,155 @@
+.cursor {
+    position: fixed;
+    mix-blend-mode: difference;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    z-index: 1000000000;
+    user-select: none;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1) translate3d(0, 0, 0);
+}
+.cursor.active {
+    opacity: 0.5;
+    transform: scale(0);
+}
+.cursor.hovered {
+    opacity: 0.08;
+}
+.cursor-follower {
+    position: fixed;
+    width: 30px;
+    mix-blend-mode: difference;
+    background-color: white;
+    opacity: 0.3;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1) translate3d(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s, width 0.3s;
+}
+.cursor-follower.active {
+    opacity: 1;
+}
+.cursor-follower.hovered {
+    opacity: 0.08;
+}
+.cursor-follower.activeContact{
+    mix-blend-mode: unset;
+    background-color: #49ffba;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    font-size: 3.4px;
+    font-weight: bolder;
+    transform: scale(5);
+    opacity: 0.8;
+}
+@media screen and (max-width:520px) {
+    .cursor-follower, .cursor{
+        display: none!important;
+    }    
+}
+/* export const Follower = () => {
+    const followerRef=useRef(null);
+    useEffect(()=>{
+        document.addEventListener('mousemove',(event)=>{
+            const {clientX,clientY}=event;
+            const mouseX=clientX-followerRef.current.clientWidth / 2;
+            const mouseY=clientY-followerRef.current.clientHeight / 2;
+            followerRef.current.style.transform=`translate3d(${mouseX}px,${mouseY}px,0)`;
+        });
+    },[]);
+    return (
+        <div className="cursor-follower" ref={followerRef} />
+    );
+} */
+
+/* 
+    const cursorRef=useRef(null);
+    const followerRef=useRef(null);
+
+    const positionRef=useRef({
+        mouseX:0,
+        mouseY:0,
+        destinationX:0,
+        destinationY:0,
+        distanceX:0,
+        distanceY:0,
+        key:-1
+    });
+
+    useEffect(()=>{
+        document.addEventListener('mousemove',(event)=>{
+            const {clientX,clientY}=event;
+            
+            const mouseX=clientX;
+            const mouseY=clientY;
+            
+            positionRef.current.mouseX=mouseX-followerRef.current.clientWidth / 2;
+            positionRef.current.mouseY=mouseY-followerRef.current.clientHeight / 2;
+
+            cursorRef.current.style.transform=`translate3d(
+                ${mouseX - cursorRef.current.clientWidth / 2}px,
+                ${mouseY - cursorRef.current.clientHeight / 2}px,
+                0
+            )`;
+        });
+    },[]);
+
+    useEffect(()=>{
+        const followMouse=()=>{
+            positionRef.current.key=requestAnimationFrame(followMouse);
+
+            const {
+                mouseX,
+                mouseY,
+                destinationX,
+                destinationY,
+                distanceX,
+                distanceY,
+            }=positionRef.current;
+    
+            if(!destinationX | !destinationY){
+                positionRef.current.destinationX=mouseX;
+                positionRef.current.destinationY=mouseY;
+            }
+            else{
+                positionRef.current.destinationX=(mouseX-destinationX) * 0.01;
+                positionRef.current.destinationY=(mouseY-destinationY) * 0.01;
+                if(Math.abs(positionRef.current.distanceX) + Math.abs(positionRef.current.distanceY) < 0.1){
+                    positionRef.current.destinationX=mouseX;
+                    positionRef.current.destinationY=mouseY;
+                }
+                else{
+                    positionRef.current.destinationX += distanceX;
+                    positionRef.current.destinationY += distanceY;
+                }
+            }
+
+            followerRef.current.style.transform=`translate3d(
+                ${destinationX}px,
+                ${destinationY}px,
+                0
+            )`;
+        }
+        followMouse();
+    },[]);
+
+            <div className="cursor" ref={cursorRef} />
+            <div className="cursor-follower" ref={followerRef} />
+*/

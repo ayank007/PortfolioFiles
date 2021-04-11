@@ -1,0 +1,23 @@
+.project3{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 350px;
+    height: 210px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgb(8 83 155) 0%, rgb(34 159 207) 100%);
+}
+.project3 img{
+    position: relative;
+    height: 80%;
+    width: 90%;
+    transform: translateX(10px);
+    /* width: auto; */
+    z-index: 100;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.project:hover .project3 img{
+    transform: translateX(30px);
+}

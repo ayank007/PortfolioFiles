@@ -1,0 +1,44 @@
+.project4{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0,134,255,1) 0%, rgba(26,128,8,1) 100%);
+}
+.project4con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    transform: rotateZ(-10deg);
+}
+.project4 img{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    z-index: 100;
+    border-radius: 5px;
+    transition: 1.3s;
+}
+.project4 .img1{
+    top: 40px;
+    left: 50px;
+}
+.project4 .img2{
+    bottom: 40px;
+    right: 50px;
+}
+#project4{
+    position: relative;
+    overflow: hidden;
+}
+.project4:hover .img1{
+    top: -140px;
+}
+.project4:hover .img2{
+    bottom: -200px;
+}

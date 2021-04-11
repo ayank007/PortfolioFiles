@@ -1,0 +1,196 @@
+.ityped-cursor {
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 1;
+    opacity: 1;
+    -webkit-animation: blink 0.5s infinite;
+    -moz-animation: blink 0.5s infinite;
+    animation: blink 0.5s infinite;
+    animation-direction: alternate;
+    transform: translateY(-12px);
+}
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+.whatIDo{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    margin-top: 15px;
+    line-height: 1;
+}
+#whatIDo{
+    font-size: 80px;
+    line-height: 1;
+    font-family: 'Anton', sans-serif;
+}
+#Heading{
+    display: flex;
+    align-items: center;
+}
+.headingCard{
+    margin-left: 16.66%;
+}
+.headingCard h5{
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.445);
+}
+.headingCard > p{
+    font-size: 20px;
+}
+.shortIntro{
+    margin-bottom: 30px;
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btns > div{
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 210px;
+    font-size: 20px;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-light);
+}
+.btns > div a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .btns > div a span{
+    position: absolute;
+    background-color: #3bf1ac;
+    display: block;
+}
+.btns > div a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+.btns > div a:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+} */
+
+.logo{
+    display: flex;
+    color: var(--secondary-light);
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+.logo > div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.shortIntro{
+    margin-right: 20%;
+}
+
+@media screen and (max-width:890px){
+    .headingCard > p{
+        font-size: 18px;
+    }
+    .headingCard h5{
+        font-size: 30px;
+    }
+    #whatIDo{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:630px){
+    .btns > div {
+        width: 130px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .ityped-cursor{
+        transform: translateY(-5px);
+    }
+}
+@media screen and (max-width:520px) {
+    #whatIDo{
+        font-size: 30px;
+    }
+    .ityped-cursor {
+        font-size: 30px;
+    }
+    .headingCard h5{
+        font-size: 23px;
+    }
+    .headingCard > p{
+        font-size: 16px;
+    }
+    .btns{
+        margin-right: 15px;
+    }
+}

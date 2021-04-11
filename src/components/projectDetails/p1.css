@@ -1,0 +1,43 @@
+/* 
+    $('#Navbar .nav1con ul').empty();
+    var navCopy = `<li><DelayLink to='/#Root' delay={1200}><a onClick={ doo } className="link hello">Home</a></DelayLink></li>
+    <li><DelayLink to='/#Project' delay={1200}><a onClick={ doo } className="link hello">My Recent Works</a></DelayLink></li>
+    <li><DelayLink to='/#AboutDetails' delay={1200}><a onClick={ doo } className="AboutDetailsLink link hello">About Me</a></DelayLink></li>
+    <li><DelayLink to='/#About' delay={1200}><a onClick={ doo } className="link hello goAboutLink">Skills & Experience</a></DelayLink></li>
+    <li><DelayLink to='/#ACademicDetails' delay={1200}><a onClick={ doo } className="link hello ACademicDetailsLink">Academic Details</a></DelayLink></li>
+    <li><DelayLink to='/#Contact' delay={1200}><a onClick={ doo } className="link hello">Contact Details</a></DelayLink></li>`;
+    $('#Navbar .nav1con ul').append(navCopy);
+ */
+.projectDetails4 .mainImg{
+    max-width: 650px;
+}
+.Content{
+    position: relative;
+    width: 100%;
+    padding: 100px 16.66% 0;
+}
+.Content h4{
+    font-size: 30px;
+}
+.toolbelt{
+    margin: 15px 0;
+}
+.mainImg{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    margin-bottom: 30px;
+}
+.workingDemo{
+    font-size: 18px;
+    text-decoration: underline!important;
+    color: #516ef7;
+    margin: 20px 0;
+}
+.Content p{
+    font-size: 18px;
+}
+.middleTxt{
+    margin-bottom: 30px;
+}

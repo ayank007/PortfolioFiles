@@ -1,0 +1,46 @@
+#gridProjects{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 16.66%;
+}
+.project{
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    margin: 30px 60px 60px 30px;
+    /* border: 1px solid white; */
+}
+.project h5{
+    margin-top: 10px;
+}
+.projectHead{
+    margin: 10px 16.66%;
+}
+
+@media screen and (max-width:680px){
+    #gridProjects{
+        margin: 0;
+    }
+    .project{
+        margin: 30px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+    .project > div{
+        zoom: 0.8;
+    }
+    .project:nth-child(4) > div{
+        zoom: 1;
+        transform: scale(0.8);
+    }
+    /* .project:nth-child(4){
+        transform: scale(0.8);
+    } */
+}

@@ -1,0 +1,23 @@
+.project6{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    height: 210px;
+    border-radius: 10px;
+    background:linear-gradient(90deg, rgb(24 8 25) 0%, rgb(255 0 255) 100%);
+}
+.project6 img{
+    position: relative;
+    height: 80%;
+    width: 90%;
+    transform: translateX(-20px);
+    /* width: auto; */
+    z-index: 100;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.project:hover .project6 img{
+    transform: translateX(-40px);
+}

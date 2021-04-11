@@ -1,0 +1,29 @@
+.project5{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255,88,88,1) 0%, rgba(100,218,255,1) 69%);
+}
+.project5 .img1{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 10px;
+    border-radius: 5px;
+    right: 20px;
+    z-index: 100;
+}
+.project5 .img2{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 40px;
+    border-radius: 5px;
+    left: -5px;
+    z-index: 101;
+}

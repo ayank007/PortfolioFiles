@@ -1,0 +1,507 @@
+.tagcloudBg{
+    width: 340px;
+    height: 340px;
+    position: relative;
+    color: white;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+    shape-outside: circle(50%);
+}
+.tagcloud--item{
+    font-size: 12px;
+}
+.SandE{
+    margin: 0 16.66%;
+}
+.tagcloud{
+    display: none;
+}
+.tagcloud:nth-child(1){
+    display: block;
+}
+.Overlay{
+    z-index: 100000000000;
+    color: black;
+}
+.aboutBtnBg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0 0;
+}
+.aboutCVBtn{
+    margin: 0 15px 15px 0;
+    padding: 5px 15px;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    border: 1px solid var(--primary-light);
+}
+.closed .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+}
+.closed .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+.opened {
+    opacity: 1;
+}
+.opened .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+}
+.opened .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+.circle-plus .circle {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    border: 1px solid var(--secondary-light);
+}
+.circle-plus .circle .horizontal {
+    position: absolute;
+    background-color: var(--secondary-light);
+    width: 30px;
+    height: 5px;
+    left: 50%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -2.5px;
+}
+.circle-plus .circle .vertical {
+    position: absolute;
+    background-color: var(--secondary-light);
+    width: 5px;
+    height: 30px;
+    left: 50%;
+    margin-left: -2.5px;
+    top: 50%;
+    margin-top: -15px;
+}
+.accordionBtn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin-left: 16.66%;
+    z-index: 2;
+    padding-left: 8px;
+}
+.accordionBtn h4{
+    margin: 0 30px;
+}
+.accordionBody{
+    position: relative;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+.accordionBtnCircle{
+    position: relative;
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+.accordionBtnCircle span{
+    min-width: 60px;
+    min-height: 60px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--secondary-light);
+    border-radius: 50%;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.accordionBtn:hover .accordionBtnCircle span{
+    transform:scale(0.8);
+}
+.accordionBtn:hover .accordionBtnCircle{
+    transform: scale(1);
+}
+.accordionBtnCircle::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--secondary-light);
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    content: '';
+}
+.accordionBtn:hover .accordionBtnCircle::before{
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    transform: scale(1.3);
+    opacity: 1;
+}
+.accordions{
+    padding: 30px 0;
+}
+
+.fire {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fire-main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: scaleUpDown 3s ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.fire-main .main-fire {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: url('#fire');
+    border: 1px solid black;
+}
+.fire-main .particle-fire {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: url('#fire');
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.fire-right {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: shake 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.fire-right .main-fire {
+    position: absolute;
+    top: 15%;
+    right: -25%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: url('#fire');
+}
+.fire-right .particle-fire {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 50%;
+    filter: url('#fire');
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.fire-left {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: shake 3s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.fire-left .main-fire {
+    position: absolute;
+    top: 15%;
+    left: -20%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: url('#fire');
+}
+.fire-left .particle-fire {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 10%;
+    height: 10%;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: url('#fire');
+    animation: particleUp 3s infinite ease-out 0;
+    animation-fill-mode: both;
+}
+.fire-bottom .main-fire {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 75%;
+    height: 75%;
+    background-color: #ff7800;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 100% 40%;
+    filter: blur(10px);
+    animation: glow 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+@keyframes scaleUpDown {
+    0%,
+    100% {
+    transform: scaleY(1) scaleX(1);
+    }
+    50%,
+    90% {
+    transform: scaleY(1.1);
+    }
+    75% {
+    transform: scaleY(0.95);
+    }
+    80% {
+    transform: scaleX(0.95);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+    transform: skewX(0) scale(1);
+    }
+    50% {
+    transform: skewX(5deg) scale(0.9);
+    }
+}
+
+@keyframes particleUp {
+    0% {
+    opacity: 0;
+    }
+    20% {
+    opacity: 1;
+    }
+    80% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    top: -100%;
+    transform: scale(0.5);
+    }
+}
+
+@keyframes glow {
+    0%,
+    100% {
+    background-color: #ef5a00;
+    }
+    50% {
+    background-color: #ff7800;
+    }
+}
+.fireBg{
+    position: relative;
+    width: 150px;
+    height: 90px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.wstick{
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #966F33;
+    box-shadow: inset 5px 5px 5px #461f00;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+}
+.wstick1{
+    transform: translateX(10px) rotate(-65deg);
+}
+.wstick2{
+    transform: translateX(calc(-50% - 20px)) rotate(65deg);
+}
+.wstick3{
+    height: 25px;
+}
+.educationABody{
+    /* padding-left: 16.66%!important; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.board{
+    width: 330px;
+    position: relative;
+    height: 350px;
+    transform: skewY(-5deg) rotateY(-20deg);
+}
+.boardCon{
+    position: relative;
+    width: 100%;
+    height: 245px;
+    z-index: 2;
+}
+.boardCon::after{
+    position: absolute;
+    content: '';
+    width: 110%;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #966F33;
+    box-shadow: inset 5px 5px 5px #461f00;
+    left: -16px;
+    top: 16px;
+    z-index: 1;
+}
+.board::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: calc(100% + 10px);
+    background-color: #966F33;
+    box-shadow: inset 5px 5px 5px #461f00;
+    border-radius: 20px;
+    right: 15px;
+    top: -10px;
+    z-index: 1;
+}
+.board::before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: calc(100% + 10px);
+    background-color: #966F33;
+    box-shadow: inset 5px 5px 5px #461f00;
+    border-radius: 20px;
+    left: 15px;
+    top: -10px;
+    z-index: 1;
+}
+.boardTxt{
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(14 14 14);
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d4d4d4d4;
+    z-index: 2;
+    overflow: hidden;
+    padding: 35px 5px 0 41px;
+}
+.boardTxt h5{
+    font-size: 13px;
+    color: black;
+    margin-bottom: 4px;
+    z-index: 5;
+}
+/* .boardTxt h5:nth-child(even){
+    background-color: whitesmoke;
+} */
+.boardTxt::before{
+    border: 4px solid #ffbe91;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 20px;
+    content: '';
+    width: calc(100% - 15px);
+    border-radius: 40px;
+    height: calc(100% - 15px);
+    border-bottom-right-radius: 0;
+    background-color: #ffcfae;
+    filter: url('#fire');
+}
+.myImg{
+    zoom: 0.7;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myImg img{
+    border-radius: 5px;
+    position: relative;
+    height: 80%;
+    width: auto;
+}
+
+.demoPage{
+    background-color: #ffbe91;
+}
+
+@media screen and (max-width:800px){
+    .tagcloudBg{
+        float: unset;
+    }
+    .magazine{
+        zoom: 0.8;
+    }
+}
+@media screen and (max-width:640px){
+    .magazine{
+        zoom: 0.7;
+    }
+    .accordionBtn h4{
+        font-size: 18px;
+    }
+    .accordionBtn .circle, .accordionBtn .accordionBtnCircle{
+        zoom: 0.5;
+    }
+    .fireBg{
+        position: absolute;
+        top: 270px;
+    }
+    .SandE{
+        margin: 0 20px;
+    }
+    .flipbookABody{
+        overflow-x: scroll;
+    }
+    /* .flipbookABody::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+    .flipbookABody::-webkit-scrollbar
+    {
+        height: 6px;
+        background-color: #F5F5F5;
+    } */
+}
+@media screen and (max-width:420px){
+    .accordionBtn .circle{
+        opacity: 0;
+    }
+}
