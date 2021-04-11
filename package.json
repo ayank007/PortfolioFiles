@@ -1,0 +1,61 @@
+{
+  "homepage": "http://ayank007.github.io/Portfolio",
+  "name": "resume",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "TagCloud": "^2.2.0",
+    "anythingzoomer": "^2.2.8",
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^4.0.2",
+    "gsap": "^3.6.0",
+    "hash-router": "^0.4.0",
+    "hover-effect": "^1.1.0",
+    "ityped": "^1.0.3",
+    "jquery": "1.12.0",
+    "react": "^17.0.2",
+    "react-delay-link": "^1.1.4",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^17.0.2",
+    "react-pageflip": "^1.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
+    "react-scripts": "4.0.3",
+    "sweetalert": "^2.1.2",
+    "three": "^0.126.1",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
